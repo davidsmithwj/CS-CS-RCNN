@@ -1,0 +1,1 @@
+python demo.py --config-file ./configs/sparsercnn.crowdhuman.cot50.500pro.68e.yaml --input ./testimg/2.jpg --output ./testimg/output --confidence-threshold 0.4 --opts MODEL.WEIGHTS ./output/output_cbam_roi_cot/model_0129999.pth

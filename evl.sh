@@ -1,0 +1,1 @@
+python train.py --num-gpus 3 --config-file ./configs/sparsercnn.crowdhuman.res50.500pro.68e.yaml --eval-only MODEL.WEIGHTS output/sparsercnn_evc_scx4_attn/model_0139999.pth
