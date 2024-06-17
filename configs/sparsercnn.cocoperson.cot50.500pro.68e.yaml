@@ -1,0 +1,31 @@
+_BASE_: "Base-SparseRCNN.yaml"
+MODEL:
+  WEIGHTS: "weights/CoTNet50-350epoch.pth"
+  BACKBONE:
+    NAME: "build_cotnet_fpn_backbone"
+  RESNETS:
+    DEPTH: 50
+    STRIDE_IN_1X1: False
+  SparseRCNN:
+    NUM_PROPOSALS: 500
+    NUM_CLASSES: 1
+DATASETS:
+  TRAIN: ("cocoperson_train",)
+  TEST:  ("cocoperson_val",)
+SOLVER:
+  IMS_PER_BATCH: 6
+  BASE_LR: 0.000005
+  STEPS: (288517) # 
+  MAX_ITER: 384690 #36e  64115 * 36 epoch / 6 = 384,690
+  CHECKPOINT_PERIOD: 38469 #  epoch
+TEST:
+  EVAL_PERIOD: 38469 # 4 epoch
+INPUT:
+  MIN_SIZE_TRAIN: (640, 672, 704, 736, 768, 800)
+  MAX_SIZE_TRAIN: 1500
+  MIN_SIZE_TEST: 800
+  MAX_SIZE_TRAIN: 1500
+  CROP:
+    ENABLED: False
+  FORMAT: "RGB"
+OUTPUT_DIR: "output/default_cocoperson_our"
