@@ -61,3 +61,10 @@ python train.py --num-gpus 3 --config-file configs/sparsercnn.crowdhuman.res50.5
 ```bash
 python train.py --num-gpus 3 --config-file ./configs/sparsercnn.crowdhuman.res50.500pro.68e.yaml --eval-only MODEL.WEIGHTS output/evl_test
 ```
+
+
+## 7. notice
+make two new folders named as detectron2 and weights. the contents of the folder detectron2 can be download [here](https://pan.baidu.com/s/1-atTJHTEleilqhVvSij5AA ) and the weights can be download [here](https://pan.baidu.com/s/1-atTJHTEleilqhVvSij5AA ).
+the whole code can be download [here](https://pan.baidu.com/s/1-atTJHTEleilqhVvSij5AA ), the PIN is CSRC.
+these codes are both for paper "Corner Sparse R-CNN in Dense Scenes" and "Redundant Contextual Feature Suppression for Pedestrian Detection in
+Dense Scenes" (which are under review.)
